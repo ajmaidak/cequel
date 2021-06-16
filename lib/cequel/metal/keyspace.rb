@@ -373,7 +373,7 @@ module Cequel
         ssl_config[:private_key] = configuration.fetch(:private_key, nil)
         ssl_config[:passphrase] = configuration.fetch(:passphrase, nil)
         ssl_config[:ssl_verify_hostname] = configuration.fetch(:ssl_verify_hostname, nil)
-        ssl_config.each { |key, value| ssl_config.delete(key) unless value }
+        ssl_config.each { |key, value| ssl_config.delete(key) if value.nil? }
         ssl_config
       end
       
