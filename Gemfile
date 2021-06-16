@@ -14,3 +14,4 @@ end
 gem 'racc', '~> 1.4', :platforms => :rbx
 gem 'rubysl', '~> 2.0', :platforms => :rbx
 gem 'psych', '~> 2.0', :platforms => :rbx
+gem 'cassandra', :git => "https://github.com/ajmaidak/ruby-driver.git", branch: add-ssl-verify-hostname-option
